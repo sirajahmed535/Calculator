@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script type="text/javascript">
+
+function dis(val)
+{
+document.getElementById("inter").value+=val
+ }
+
+ function solve()
+ {
+let x = document.getElementById("inter").value
+let y = eval(x)
+document.getElementById("inter").value = y
+}
+//function for clearing the display
+function clr()
+{
+document.getElementById("inter").value = ""
+}
+
+</script>
+<body>
+	<h1>CALCULATOR</h1>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ">
+				<div class="col-md-4 calcu-section">
+					<table>
+						<tbody>
+							<tr>
+								<td> <input type="button" value="C" name="clear" onclick="clr()"></td>
+								<td colspan="3"><input type="text" name="input-text" placeholder="Input Number" id="inter"></td>
+								
+							</tr>
+
+							<tr>
+								<td><input type="button" value="+" onclick="dis('+')"></td>
+								<td><input type="button" value="1" onclick="dis('1')"></td>
+								<td><input type="button" value="2" onclick="dis('2')"></td>
+								<td><input type="button" value="3" onclick="dis('3')"></td>
+							</tr>
+
+							<tr>
+								<td><input type="button" value="-" onclick="dis('-')"></td>
+								<td><input type="button" value="4" onclick="dis('4')"></td>
+								<td><input type="button" value="5" onclick="dis('5')"></td>
+								<td><input type="button" value="6" onclick="dis('6')"></td>
+							</tr>
+
+							<tr>
+								<td><input type="button" value="*" onclick="dis('*')"></td>
+								<td><input type="button" value="7" onclick="dis('7')"></td>
+								<td><input type="button" value="8" onclick="dis('8')"></td>
+								<td><input type="button" value="9" onclick="dis('9')"></td>
+							</tr>
+
+							<tr>
+								<td><input type="button" value="/" onclick="dis('/')"></td>
+								<td><input type="button" value="." onclick="dis('.')"></td>
+								<td><input type="button" value="0" onclick="dis('0')"></td>
+								<td><input type="button" value="=" onclick="solve()"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
